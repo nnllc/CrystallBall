@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptImage" id="Background" x="0.0" y="1.0" width="900.0"
+             height="600.0" scale="0.5" fileName="{PROJECT_FOLDER}BG05.png"/>
+  <Component type="ScriptSlider" id="InputSigknb" x="-2.0" y="8.0" filmstripImage="{PROJECT_FOLDER}Slider-1271.png"
+             numStrips="127.0" scaleFactor="1.25" width="150.0" height="40.0"
+             mode="Decibel" min="-50.0" max="24.0" stepSize="0.1000000014901161"
+             suffix=" dB" middlePosition="-6.0" isPluginParameter="1" useUndoManager="1"
+             text="Input Gain" tooltip="Input Gain" pluginParameterName="Input Gain"
+             processorId="InputGain" parameterId="Gain"/>
+  <Component type="ScriptSlider" id="OutputSigknb" x="742.0" y="8.0" filmstripImage="{PROJECT_FOLDER}Slider-1271.png"
+             numStrips="127.0" scaleFactor="1.25" width="150.0" height="40.0"
+             mode="Decibel" min="-50.0" max="24.0" stepSize="0.1000000014901161"
+             suffix=" dB" middlePosition="-6.0" isPluginParameter="1" useUndoManager="1"
+             text="Output Gain" tooltip="Output Gain" pluginParameterName="Output Gain"
+             processorId="OutputGain" parameterId="Gain"/>
+  <Component type="ScriptPanel" id="CrystalPanel" x="297.0" y="166.0" bgColour="0"
+             itemColour="0" itemColour2="0" textColour="0" width="300.0" height="280.0">
+    <Component type="ScriptSlider" id="CrystallBallknb" x="23.0" y="9.0" filmstripImage="{PROJECT_FOLDER}CrystalBall-241-1.png"
+               width="265.0" height="265.0" numStrips="241.0" scaleFactor="0.5400000214576721"
+               min="-100.0" max="0.0" mode="Decibel" middlePosition="-50.0"
+               parentComponent="CrystalPanel"/>
+    <Component type="ScriptPanel" id="LevelMeterRight" x="148.0" y="-2.0" width="150.0"
+               height="250.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
+               parentComponent="CrystalPanel">
+      <Component type="ScriptSlider" id="LevelMeterR" x="-143.0" y="-2.0" filmstripImage="{PROJECT_FOLDER}Scale-Right-641.png"
+                 width="290.0" height="250.0" numStrips="65.0" scaleFactor="1.424999952316284"
+                 middlePosition="-18.0" enableMidiLearn="0" scrollWheel="0" showTextBox="0"
+                 sendValueOnDrag="0" mode="Decibel" stepSize="0.1000000014901161"
+                 suffix=" dB" min="-100.0" max="0.0" parentComponent="LevelMeterRight"/>
+    </Component>
+    <Component type="ScriptSlider" id="LevelMeterL" x="9.0" y="-3.0" filmstripImage="{PROJECT_FOLDER}Scale-left-641.png"
+               width="140.0" height="250.0" numStrips="65.0" scaleFactor="1.424999952316284"
+               isVertical="0" middlePosition="-18.0" sendValueOnDrag="0" enableMidiLearn="0"
+               scrollWheel="0" showTextBox="0" mode="Decibel" stepSize="0.1000000014901161"
+               suffix=" dB" min="-100.0" max="0.0" parentComponent="CrystalPanel"/>
+    <Component type="ScriptSlider" id="LevelMeterLock" x="93.0" y="114.0" visible="0"
+               parentComponent="CrystalPanel"/>
+  </Component>
+  <Component type="ScriptPanel" id="FXPanel" x="0.0" y="80.0" width="900.0"
+             height="460.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0">
+    <Component type="ScriptSlider" id="HiPassknb" x="364.0" y="5.0" filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png"
+               width="60.0" height="60.0" numStrips="128.0" scaleFactor="0.8999999761581421"
+               mode="Frequency" min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz"
+               middlePosition="1500.0" defaultValue="20.0" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" tooltip="Global High-Pass Filter"
+               text="Global High-Pass Filter" pluginParameterName="Global High-Pass Filter"/>
+    <Component type="ScriptSlider" id="LoPassknb" x="470.0" y="5.0" filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png"
+               width="60.0" height="60.0" numStrips="128.0" scaleFactor="0.8999999761581421"
+               mode="Frequency" min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz"
+               middlePosition="1500.0" defaultValue="20000.0" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" text="Global Low-Pass Filter"
+               tooltip="Global Low-Pass Filter" pluginParameterName="Global Low-Pass Filter"/>
+    <Component type="ScriptSlider" id="MainShaperknb" x="218.0" y="27.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" parentComponent="FXPanel" scaleFactor="1.25"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               tooltip="Shaper Effect Chain" text="Shaper Effect Chain" pluginParameterName="Shaper Effect Chain"
+               middlePosition="0.5"/>
+    <Component type="ScriptSlider" id="MainWarmknb" x="163.0" y="162.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               text="Warm Effect Chain" tooltip="Warm Effect Chain" pluginParameterName="Warm Effect Chain"/>
+    <Component type="ScriptSlider" id="MainChorusknb" x="218.0" y="297.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               text="Chorus Effect Chain" tooltip="Chorus Effect Chain" pluginParameterName="Chorus Effect Chain"
+               middlePosition="0.5"/>
+    <Component type="ScriptSlider" id="MainDetuneknb" x="46.0" y="77.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               text="Detune Effect Chain" tooltip="Detune Effect Chain" pluginParameterName="Detune Effect Chain"/>
+    <Component type="ScriptSlider" id="MainAutopanknb" x="46.0" y="246.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" text="Autopan Effect Chain"
+               tooltip="Autopan Effect Chain" pluginParameterName="Autopan Effect Chain"
+               mode="Pan" suffix="R" middlePosition="0.5"/>
+    <Component type="ScriptSlider" id="SideFXAutopanTimeknb" x="29.0" y="237.0"
+               filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png" width="40.0"
+               height="40.0" numStrips="128.0" scaleFactor="0.6349999904632568"
+               mode="TempoSync" max="18.0" stepSize="1.0" middlePosition="9.0"
+               defaultValue="9.0" parentComponent="FXPanel" isPluginParameter="1"
+               useUndoManager="1" text="Autopan Time" tooltip="Autopan Time (Tempo-Synced)"
+               pluginParameterName="Autopan Time"/>
+    <Component type="ScriptSlider" id="MainDelayknb" x="562.0" y="28.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               text="Delay Effect Chain" tooltip="Delay Effect Chain" pluginParameterName="Delay Effect Chain"/>
+    <Component type="ScriptSlider" id="SideFXDelayTimeknb" x="659.0" y="18.0"
+               filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png" width="40.0"
+               height="40.0" numStrips="128.0" scaleFactor="0.6349999904632568"
+               mode="TempoSync" max="18.0" stepSize="1.0" middlePosition="9.0"
+               defaultValue="9.0" parentComponent="FXPanel" isPluginParameter="1"
+               useUndoManager="1" text="Delay Time" tooltip="Delay Time (Tempo-Synced)"
+               pluginParameterName="Delay Time"/>
+    <Component type="ScriptSlider" id="MainReverbknb" x="618.0" y="163.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               text="Reverb Effect Chain" tooltip="Reverb Effect Chain" pluginParameterName="Reverb Effect Chain"/>
+    <Component type="ScriptSlider" id="MainDimensionknb" x="564.0" y="297.0"
+               width="140.0" height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" isMetaParameter="1"
+               text="Dimension Effect Chain" tooltip="Dimension Effect Chain"
+               pluginParameterName="Dimension Effect Chain"/>
+    <Component type="ScriptSlider" id="MainAirknb" x="735.0" y="76.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" text="Air Effect Chain"
+               tooltip="Air Effect Chain (Reverb &amp; Delay Channel)" pluginParameterName="Air Effect Chain"/>
+    <Component type="ScriptSlider" id="SideFXAirHPknb" x="719.0" y="65.0" filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png"
+               width="40.0" height="40.0" numStrips="128.0" scaleFactor="0.6349999904632568"
+               mode="Frequency" min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz"
+               middlePosition="1500.0" defaultValue="20.0" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" text="Air High-Pass Filter"
+               tooltip="Air High-Pass Filter" pluginParameterName="Air High-Pass Filter"/>
+    <Component type="ScriptSlider" id="SideFXAirLPknb" x="829.0" y="65.0" filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png"
+               width="40.0" height="40.0" numStrips="128.0" scaleFactor="0.6349999904632568"
+               mode="Frequency" min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz"
+               middlePosition="1500.0" defaultValue="20000.0" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" text="Air Low-Pass Filter"
+               tooltip="Air Low-Pass Filter" pluginParameterName="Air Low-Pass Filter"/>
+    <Component type="ScriptSlider" id="MainDropsknb" x="735.0" y="249.0" width="140.0"
+               height="140.0" filmstripImage="{PROJECT_FOLDER}Knob-Main-129.png"
+               numStrips="129.0" scaleFactor="1.25" parentComponent="FXPanel"
+               isPluginParameter="1" useUndoManager="1" text="Gate/Drops Effect Chain"
+               tooltip="Gate/Drops Effect Chain" pluginParameterName="Gate/Drops Effect Chain"/>
+    <Component type="ScriptSlider" id="SideFXDropsTimeknb" x="829.0" y="236.0"
+               filmstripImage="{PROJECT_FOLDER}Small-Knob-128.png" width="40.0"
+               height="40.0" numStrips="128.0" scaleFactor="0.6349999904632568"
+               mode="TempoSync" max="18.0" stepSize="1.0" middlePosition="9.0"
+               defaultValue="9.0" parentComponent="FXPanel" isPluginParameter="1"
+               useUndoManager="1" text="Gate/Drops Time" tooltip="Gate/Drops Time (Tempo-Synced)"
+               pluginParameterName="Gate/Drops Time"/>
+    <Component type="ScriptButton" id="MagicRandombtn" x="414.0" y="364.0" filmstripImage="{PROJECT_FOLDER}MagicButton1.png"
+               width="73.0" height="73.0" scaleFactor="0.5" isMomentary="1"
+               parentComponent="FXPanel" saveInPreset="0" text="Magic Crystal Ball Button"
+               tooltip="Magic Crystal Ball Button" pluginParameterName="Magic Crystal Ball Button"
+               isPluginParameter="1" isMetaParameter="1"/>
+    <Component type="ScriptButton" id="Undobtn" x="393.0" y="419.0" filmstripImage="{PROJECT_FOLDER}UndoButton2.png"
+               width="29.0" height="29.0" scaleFactor="0.2000000029802322" isMomentary="1"
+               parentComponent="FXPanel" saveInPreset="0" isPluginParameter="1"
+               isMetaParameter="1" text="Undo Recent Change" tooltip="Undo Recent Change"
+               pluginParameterName="Undo Recent Change"/>
+    <Component type="ScriptButton" id="Redobtn" x="478.0" y="419.0" filmstripImage="{PROJECT_FOLDER}Redobtn.png"
+               width="29.0" height="29.0" scaleFactor="0.2000000029802322" isMomentary="1"
+               parentComponent="FXPanel" saveInPreset="0" isPluginParameter="1"
+               isMetaParameter="1" text="Redo Recent Change" tooltip="Redo Recent Change"
+               pluginParameterName="Redo Recent Change"/>
+  </Component>
+  <Component type="ScriptPanel" id="PresetBarPanel" x="370.0" y="560.0" width="410.0"
+             height="30.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0">
+    <Component type="ScriptButton" id="Presetbtn" x="14.0" y="12.0" width="13.0"
+               height="15.0" filmstripImage="{PROJECT_FOLDER}PresetButton-Presets1.png"
+               scaleFactor="0.5" enableMidiLearn="0" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="View Preset Panel" tooltip="View Preset Panel"
+               pluginParameterName="View Preset Panel"/>
+    <Component type="ScriptButton" id="PresetResetbtn" x="40.0" y="12.0" width="13.0"
+               height="15.0" filmstripImage="{PROJECT_FOLDER}PresetButton-Clear1.png"
+               scaleFactor="0.5" isMomentary="1" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="Clear All Settings" tooltip="Clear All Settings"
+               pluginParameterName="Clear All Settings" isMetaParameter="1"
+               isPluginParameter="1"/>
+    <Component type="ScriptButton" id="PrevPresetbtn" x="66.0" y="11.0" width="19.0"
+               height="15.0" filmstripImage="{PROJECT_FOLDER}PresetButton-Previous1.png"
+               scaleFactor="0.5" isMomentary="1" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="Load Previous Preset" tooltip="Load Previous Preset"
+               pluginParameterName="Load Previous Preset" isPluginParameter="1"/>
+    <Component type="ScriptButton" id="NextPresetbtn" x="87.0" y="11.0" width="19.0"
+               height="15.0" filmstripImage="{PROJECT_FOLDER}PresetButton-Next1.png"
+               scaleFactor="0.5" isMomentary="1" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="Load Next Preset" tooltip="Load Next Preset"
+               pluginParameterName="Load Next Preset" isPluginParameter="1"/>
+    <Component type="ScriptButton" id="MIDICCbtn" x="338.0" y="9.0" width="18.0"
+               height="20.0" filmstripImage="{PROJECT_FOLDER}PresetButton-CC1.png"
+               scaleFactor="0.699999988079071" enableMidiLearn="0" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="View MIDI CC Panel" tooltip="View MIDI CC Panel"
+               pluginParameterName="View MIDI CC Panel"/>
+    <Component type="ScriptButton" id="WebHomebtn" x="368.0" y="11.0" width="15.0"
+               height="15.0" filmstripImage="{PROJECT_FOLDER}PresetButton-WebHome1.png"
+               scaleFactor="0.5" isMomentary="1" enableMidiLearn="0" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="View Website" tooltip="View Website" pluginParameterName="View Website"/>
+    <Component type="ScriptButton" id="WebHelpbtn" x="390.0" y="11.0" width="15.0"
+               height="15.0" filmstripImage="{PROJECT_FOLDER}PresetButton-WebHelp1.png"
+               scaleFactor="0.5" isMomentary="1" enableMidiLearn="0" parentComponent="PresetBarPanel"
+               saveInPreset="0" text="View Plugin Manual/Resources" tooltip="View Plugin Manual/Resources"
+               pluginParameterName="View Plugin Manual/Resources"/>
+  </Component>
+  <Component type="ScriptPanel" id="pnlTooltip" x="110.0" y="564.0" itemColour2="0"
+             itemColour="0" bgColour="0" textColour="4294967295" width="240.0"
+             height="30.0"/>
+  <Component type="ScriptPanel" id="PresetPanel" x="77.0" y="86.0" width="750.0"
+             height="455.0" bgColour="0" itemColour="4026531840" itemColour2="4026531840"
+             textColour="4284250879" borderRadius="0.0" borderSize="1.0" visible="0">
+    <Component type="ScriptFloatingTile" id="PresetBrowser" x="4.0" y="2.0"
+               ContentType="PresetBrowser" bgColour="0" itemColour="4284250879"
+               itemColour2="4284966759" Data="{&#10;  &quot;ShowSaveButton&quot;: true,&#10;  &quot;ShowExpansionsAsColumn&quot;: false,&#10;  &quot;ShowFolderButton&quot;: true,&#10;  &quot;ShowNotes&quot;: false,&#10;  &quot;ShowEditButtons&quot;: true,&#10;  &quot;EditButtonOffset&quot;: 10,&#10;  &quot;ShowAddButton&quot;: true,&#10;  &quot;ShowRenameButton&quot;: true,&#10;  &quot;ShowDeleteButton&quot;: true,&#10;  &quot;ShowFavoriteIcon&quot;: true,&#10;  &quot;ButtonsInsideBorder&quot;: true,&#10;  &quot;NumColumns&quot;: 3,&#10;  &quot;ColumnWidthRatio&quot;: [&#10;    0.3333333333333333,&#10;    0.3333333333333333,&#10;    0.3333333333333333&#10;  ],&#10;  &quot;ListAreaOffset&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;ColumnRowPadding&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;SearchBarBounds&quot;: [],&#10;  &quot;MoreButtonBounds&quot;: [],&#10;  &quot;SaveButtonBounds&quot;: [],&#10;  &quot;FavoriteButtonBounds&quot;: []&#10;}"
+               width="745.0" height="450.0" itemColour3="16711680" parentComponent="PresetPanel"
+               Font="Arial"/>
+  </Component>
+  <Component type="ScriptPanel" id="MIDICCPanel" x="77.0" y="86.0" width="750.0"
+             height="455.0" itemColour="4026531840" itemColour2="4026531840"
+             textColour="4284250879" borderSize="1.0" borderRadius="0.0" visible="0">
+    <Component type="ScriptFloatingTile" id="MIDICCtile" x="4.0" y="2.0" ContentType="MidiLearnPanel"
+               bgColour="0" itemColour="4284250879" itemColour2="0" width="745.0"
+               height="450.0" itemColour3="16711680" parentComponent="MIDICCPanel"/>
+  </Component>
+  <Component type="ScriptPanel" id="PRESET_Bar" x="482" y="554" width="230"
+             height="50" itemColour="0" itemColour2="0" textColour="00000000"
+             borderSize="0" borderRadius="0">
+    <Component type="ScriptPanel" id="PresetDisplay" x="1" y="10" width="223"
+               height="30" parentComponent="PRESET_Bar"/>
+  </Component>
+  <Component type="ScriptPanel" id="HIDEPanel" x="0.0" y="0.0" width="880.0"
+             height="600.0" itemColour="4278190080" itemColour2="4278190080"
+             visible="0">
+    <Component type="ScriptButton" id="HPMainPowerbtn" x="620.0" y="10.0" width="100.0"
+               height="30.0" processorId="HPmain" parameterId="Enabled" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0" parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="HPMainknb" x="620.0" y="30.0" width="100.0"
+               height="40.0" mode="Frequency" min="20.0" max="20000.0" stepSize="1.0"
+               suffix=" Hz" middlePosition="1500.0" defaultValue="20.0" processorId="HPmain"
+               parameterId="Freq" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="LPMainknb" x="720.0" y="30.0" width="100.0"
+               height="40.0" mode="Frequency" min="20.0" max="20000.0" stepSize="1.0"
+               suffix=" Hz" middlePosition="1500.0" defaultValue="20000.0" processorId="LPmain"
+               parameterId="Freq" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="LPMainPowerbtn" x="720.0" y="10.0" width="100.0"
+               height="30.0" processorId="LPmain" parameterId="Enabled" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0" parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="ShaperHPknb" x="100.0" y="35.0" mode="Frequency"
+               min="20.0" max="250.0" stepSize="1.0" suffix=" Hz" middlePosition="125.0"
+               defaultValue="20.0" processorId="ShaperHP" parameterId="Freq"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ShaperMonoknb" x="10.0" y="35.0" max="100.0"
+               suffix="%" middlePosition="50.0" defaultValue="100.0" processorId="ShaperMono"
+               parameterId="Width" parentComponent="HIDEPanel" width="90.0"
+               height="40.0" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="ShaperMonoPowerbtn" x="10.0" y="8.0"
+               processorId="ShaperMono" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="ShaperHPPowerbtn" x="100.0" y="8.0" processorId="ShaperHP"
+               parameterId="Enabled" parentComponent="HIDEPanel" width="70.0"
+               height="30.0" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="WarmLowBoostPowerbtn" x="10.0" y="89.0"
+               processorId="WarmLowBoost" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="WarmSaturatorPowerbtn" x="102.0" y="89.0"
+               processorId="WarmSaturator" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="WarmHiCutPowerbtn" x="193.0" y="89.0"
+               processorId="WarmHiCut" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="WarmLowBoostknb" x="8.0" y="123.0" max="2.0"
+               suffix="dB" middlePosition="1.0" processorId="WarmLowBoost" parameterId="Gain"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="WarmSaturationAmtknb" x="100.0" y="121.0"
+               suffix="%" middlePosition="0.4000000059604645" processorId="WarmSaturator"
+               parameterId="Saturation" parentComponent="HIDEPanel" width="90.0"
+               height="40.0" max="0.800000011920929" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="WarmMakeupknb" x="110.0" y="170.0" min="-13.0"
+               max="0.0" middlePosition="-6.5" processorId="WarmMakeup" parameterId="Gain"
+               isPluginParameter="1" width="80.0" height="40.0" parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="WarmhiCutknb" x="15.0" y="166.0" max="20000.0"
+               suffix="Hz" middlePosition="14000.0" defaultValue="8000.0" processorId="WarmHiCut"
+               parameterId="Freq" parentComponent="HIDEPanel" width="90.0" height="40.0"
+               min="8000.0" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="DetunePowerbtn" x="12.0" y="218.0" processorId="Detune"
+               linkedTo="Button1" parameterId="Enabled" parentComponent="HIDEPanel"
+               width="90.0" height="30.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DetuneWidthknb" x="11.0" y="250.0" middlePosition="0.5"
+               processorId="Detune" parameterId="Amount" parentComponent="HIDEPanel"
+               width="90.0" height="40.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DetuneTimeknb" x="106.0" y="250.0" middlePosition="0.5"
+               processorId="Detune" parameterId="Time" parentComponent="HIDEPanel"
+               width="90.0" height="40.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DetuneFBknb" x="13.0" y="294.0" middlePosition="0.5"
+               processorId="Detune" parameterId="Mix" parentComponent="HIDEPanel"
+               width="90.0" height="40.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="ChorusPowerbtn" x="11.0" y="350.0" processorId="Chorus"
+               linkedTo="Button1" parameterId="Enabled" parentComponent="HIDEPanel"
+               width="90.0" height="30.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="ChorusVibratoPowerbtn" x="101.0" y="350.0"
+               processorId="ChrousVibrato" parameterId="Enabled" parentComponent="HIDEPanel"
+               width="70.0" height="30.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ChorusRateknb" x="8.0" y="377.0" suffix="%"
+               middlePosition="0.5" processorId="Chorus" parameterId="Rate"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ChorusWidthknb" x="98.0" y="377.0" suffix="%"
+               middlePosition="0.625" processorId="Chorus" parameterId="Width"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" min="0.5"
+               defaultValue="0.5" max="0.75"/>
+    <Component type="ScriptSlider" id="ChorusVibratoknb" x="100.0" y="416.0"
+               mode="Frequency" max="0.4000000059604645" suffix=" Hz" middlePosition="0.2000000029802322"
+               processorId="ChorusVibratoMOD" parameterId="Intensity" parentComponent="HIDEPanel"
+               width="70.0" height="40.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ChorusDelayknb" x="10.0" y="416.0" suffix="%"
+               middlePosition="0.5" processorId="Chorus" parameterId="Delay"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ChorusFBknb" x="167.0" y="377.0" suffix="%"
+               middlePosition="0.5" processorId="Chorus" parameterId="Feedback"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="AutopanPowerbtn" x="11.0" y="470.0" processorId="Autopan"
+               linkedTo="Button1" parameterId="Enabled" parentComponent="HIDEPanel"
+               width="90.0" height="30.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="AutopanMixknb" x="11.0" y="497.0" middlePosition="50.0"
+               processorId="Autopan" parameterId="Balance" parentComponent="HIDEPanel"
+               width="90.0" height="50.0" mode="Pan" max="100.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="AutopanTimeknb" x="101.0" y="497.0" mode="TempoSync"
+               max="18.0" stepSize="1.0" middlePosition="9.0" defaultValue="9.0"
+               processorId="AutopanMOD" parameterId="Frequency" parentComponent="HIDEPanel"
+               width="70.0" height="40.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="DelayPowerbtn" x="300.0" y="0.0" processorId="Delay"
+               linkedTo="Button1" parameterId="Enabled" parentComponent="HIDEPanel"
+               width="90.0" height="30.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DelayTimeLeftknb" x="301.0" y="31.0"
+               middlePosition="9.0" processorId="Delay" parameterId="DelayTimeLeft"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" mode="TempoSync"
+               max="18.0" stepSize="1.0" defaultValue="9.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DelayTimeRightknb" x="391.0" y="31.0"
+               middlePosition="9.0" processorId="Delay" parameterId="DelayTimeRight"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" mode="TempoSync"
+               max="18.0" stepSize="1.0" defaultValue="9.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DelayMixknb" x="460.0" y="31.0" suffix="%"
+               middlePosition="0.5" processorId="Delay" parameterId="Mix" parentComponent="HIDEPanel"
+               width="70.0" height="40.0" mode="NormalizedPercentage" defaultValue="1.0"
+               isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DelayFBLeftknb" x="303.0" y="70.0" suffix="%"
+               middlePosition="0.5" processorId="Delay" parameterId="FeedbackLeft"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" mode="NormalizedPercentage"
+               isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DelayFBRightknb" x="393.0" y="70.0" mode="NormalizedPercentage"
+               suffix="%" middlePosition="0.5" processorId="Delay" parameterId="FeedbackRight"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DelayMakeupknb" x="460.0" y="70.0" mode="Frequency"
+               max="-16.0" suffix=" Hz" middlePosition="-33.0" processorId="DelayMakeup"
+               parameterId="Gain" parentComponent="HIDEPanel" width="70.0" height="40.0"
+               min="-50.0" defaultValue="-50.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="ReverbPowerbtn" x="301.0" y="123.0" processorId="Reverb"
+               linkedTo="Button1" parameterId="Enabled" parentComponent="HIDEPanel"
+               width="90.0" height="30.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ReverbMixknb" x="302.0" y="154.0" middlePosition="0.5"
+               processorId="Reverb" parameterId="WetLevel" parentComponent="HIDEPanel"
+               width="90.0" height="40.0" mode="NormalizedPercentage" defaultValue="1.0"
+               suffix="%" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ReverbDampknb" x="392.0" y="154.0" middlePosition="0.5"
+               processorId="Reverb" parameterId="Damping" parentComponent="HIDEPanel"
+               width="70.0" height="40.0" mode="NormalizedPercentage" suffix="%"
+               isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ReverbWidthknb" x="461.0" y="154.0" suffix="%"
+               middlePosition="0.5" processorId="Reverb" parameterId="Width"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" mode="NormalizedPercentage"
+               isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ReverbRoomknb" x="304.0" y="193.0" suffix="%"
+               middlePosition="0.5" processorId="Reverb" parameterId="RoomSize"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" mode="NormalizedPercentage"
+               isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="ReverbMakeupknb" x="394.0" y="193.0"
+               mode="Decibel" middlePosition="-18.0" processorId="ReverbMakeup"
+               parameterId="Gain" parentComponent="HIDEPanel" width="70.0" height="40.0"
+               min="-30.0" max="-6.0" defaultValue="-30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="GateDropsPowerbtn" x="300.0" y="526.0"
+               processorId="GateDrops" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="GateDropsAmountknb" x="301.0" y="557.0"
+               middlePosition="0.5" processorId="GateDropsMOD" parameterId="Intensity"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" mode="NormalizedPercentage"
+               suffix="%" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="GateDropsTimeknb" x="391.0" y="557.0"
+               middlePosition="9.0" processorId="GateDropsMOD" parameterId="Frequency"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" mode="TempoSync"
+               max="18.0" stepSize="1.0" defaultValue="9.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="DimensionSlapPowerbtn" x="300.0" y="400.0"
+               processorId="DimensionSlapDelay" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DimensionSlapTimeknb" x="301.0" y="431.0"
+               middlePosition="5.0" processorId="DimensionSlapDelay" parameterId="DelayTimeRight"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" max="10.0"
+               isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DimensionSlapMixknb" x="393.0" y="433.0"
+               middlePosition="0.5" processorId="DimensionSlapDelay" parameterId="Mix"
+               parentComponent="HIDEPanel" width="70.0" height="40.0" mode="NormalizedPercentage"
+               suffix="%" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="Dimension3dknb" x="465.0" y="438.0" middlePosition="150.0"
+               processorId="Dimesnion3D" parameterId="Width" parentComponent="HIDEPanel"
+               width="70.0" height="40.0" max="200.0" stepSize="1.0" defaultValue="100.0"
+               min="100.0" isPluginParameter="1" useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="GateDropsPowerbtn1" x="390.0" y="526.0"
+               processorId="GateDrops" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptButton" id="Dimension3dPowerbtn" x="393.0" y="401.0"
+               processorId="Dimesnion3D" linkedTo="Button1" parameterId="Enabled"
+               parentComponent="HIDEPanel" width="90.0" height="30.0" isPluginParameter="1"
+               useUndoManager="1" enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DimensionGainknb" x="300.0" y="480.0"
+               middlePosition="-3.0" processorId="DimensionMakeup" parameterId="Gain"
+               parentComponent="HIDEPanel" width="90.0" height="40.0" max="0.0"
+               min="-6.0" suffix="dB" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0"/>
+    <Component type="ScriptSlider" id="DetuneDelayknb" x="105.0" y="295.0" middlePosition="0.1500000059604645"
+               processorId="Detune" parameterId="Delay" parentComponent="HIDEPanel"
+               width="90.0" height="40.0" isPluginParameter="1" useUndoManager="1"
+               enableMidiLearn="0" max="0.300000011920929" stepSize="0.1000000014901161"/>
+    <Component type="ScriptSlider" id="AirDelayGritknb" x="300.0" y="300.0"
+               width="70.0" height="40.0" processorId="AIRDelayGrit" max="0.8999999761581421"
+               middlePosition="0.449999988079071" parameterId="Saturation" isPluginParameter="1"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirDelayHPknb" x="375.0" y="303.0" width="70.0"
+               height="40.0" processorId="AIRDelayHP" mode="Frequency" min="20.0"
+               max="20000.0" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+               defaultValue="20.0" parameterId="Freq" isPluginParameter="1"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirDelayLPknb" x="449.0" y="302.0" width="70.0"
+               height="40.0" processorId="AIRDelayLP" mode="Frequency" min="20.0"
+               max="20000.0" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+               defaultValue="20000.0" parameterId="Freq" isPluginParameter="1"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirReverbGritknb" x="310.0" y="340.0"
+               width="70.0" height="40.0" processorId="AIRReverbGrit" max="0.8999999761581421"
+               middlePosition="0.449999988079071" parameterId="Saturation" isPluginParameter="1"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirReverbHPknb" x="386.0" y="343.0" width="70.0"
+               height="40.0" processorId="AIRReverbHP" mode="Frequency" min="20.0"
+               max="20000.0" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+               defaultValue="20.0" parameterId="Freq" isPluginParameter="1"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirReverbLPknb" x="456.0" y="348.0" width="70.0"
+               height="40.0" processorId="AIRReverbLP" mode="Frequency" min="20.0"
+               max="20000.0" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+               defaultValue="20000.0" parameterId="Freq" isPluginParameter="1"
+               parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="AirDelayHPPowerbtn" x="300.0" y="270.0"
+               width="70.0" height="30.0" processorId="AIRDelayHP" parameterId="Enabled"
+               isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="AirDelayLPPowerbtn" x="376.0" y="272.0"
+               width="70.0" height="30.0" processorId="AIRDelayLP" parameterId="Enabled"
+               isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="AirReverbHPPowerbtn" x="449.0" y="274.0"
+               width="70.0" height="30.0" processorId="AIRReverbHP" parameterId="Enabled"
+               isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="AirReverbLPPowerbtn" x="525.0" y="274.0"
+               width="70.0" height="30.0" processorId="AIRReverbLP" parameterId="Enabled"
+               isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="AirDelayGritPowerbtn" x="300.0" y="240.0"
+               width="70.0" height="30.0" processorId="AIRDelayGrit" parameterId="Enabled"
+               isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptButton" id="AirReverbGritPowerbtn" x="376.0" y="242.0"
+               width="70.0" height="30.0" processorId="AIRReverbGrit" parameterId="Enabled"
+               isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirDelayGritMakupknb" x="530.0" y="310.0"
+               width="70.0" height="40.0" processorId="AIRDelayGrit" max="0.0"
+               middlePosition="-6.5" parameterId="PostGain" min="-13.0" mode="Decibel"
+               suffix="dB" isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="AirReverbGritMakeupknb" x="530.0" y="350.0"
+               width="70.0" height="40.0" processorId="AIRReverbGrit" max="0.0"
+               middlePosition="-6.5" parameterId="PostGain" min="-13.0" mode="Decibel"
+               suffix="dB" isPluginParameter="1" parentComponent="HIDEPanel"/>
+    <Component type="ScriptSlider" id="ReverbHPknb" x="470.0" y="200.0" min="20.0"
+               max="250.0" mode="Frequency" middlePosition="135.0" suffix="Hz"
+               parentComponent="HIDEPanel" width="80.0" height="40.0"/>
+    <Component type="ScriptButton" id="ReverbHPbtn" x="400.0" y="120.0" width="70.0"
+               height="30.0" processorId="ReverbHP" parameterId="Enabled" parentComponent="HIDEPanel"/>
+  </Component>
+</ContentProperties>
